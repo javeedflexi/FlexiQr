@@ -37,7 +37,7 @@ An app to create beautiful QR codes and scan various QR code types.
 ### Installation as PWA
 
 <details>
-<summary>MiniQR can also be installed as a Progressive Web App (PWA) on your device</summary>
+<summary>FlexiQR can also be installed as a Progressive Web App (PWA) on your device</summary>
 
 1. **Desktop (Chrome/Edge)**:
 
@@ -52,12 +52,12 @@ An app to create beautiful QR codes and scan various QR code types.
    - Tap "Install" or "Add"
 
 3. **iOS (Safari)**:
-   - Visit [mini-qr.vercel.app](https://mini-qr.vercel.app)
+   - Visit [Flexi-qr.vercel.app](https://mini-qr.vercel.app)
    - Tap the Share button
    - Scroll down and tap "Add to Home Screen"
    - Tap "Add"
 
-Once installed, MiniQR will work offline and provide a native app-like experience.
+Once installed, FlexiQR will work offline and provide a native app-like experience.
 
 </details>
 
@@ -105,16 +105,12 @@ https://github.com/user-attachments/assets/fef17e6a-c226-4136-9501-8d3e951671e0
 
 <summary>MVP - presets, languages, dark/light mode (v0.3.0)</summary>
 
-https://github.com/lyqht/mini-qr/assets/35736525/991b2d7e-f168-4354-9091-1678d2c1bddb
 
-</details>
 
 ## Self-hosting with Docker 🐋
 
-Mini-QR can easily be self-hosted. We provide a [docker-compose.yml](docker-compose.yml) file as well as our own images. We are using GitHub's `ghrc.io` Container Registry.
+Flexi-QR can easily be self-hosted. We provide a [docker-compose.yml](docker-compose.yml) file as well as our own images. We are using GitHub's `ghrc.io` Container Registry.
 
-```bash
-wget https://github.com/lyqht/mini-qr/raw/main/docker-compose.yml
 
 docker compose up -d
 ```
