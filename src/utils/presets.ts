@@ -246,8 +246,8 @@ export const vueJsPreset: Preset = {
 
 export const defaultPreset: Preset = {
   ...defaultPresetOptions,
-  name: 'Default (lyqht)',
-  data: 'https://github.com/lyqht',
+  name: 'Default (flexifunnels)',
+  data: 'https://flexifunnels.com/',
   image: PLACEHOLDER_IMAGE_URL,
   dotsOptions: {
     color: '#abcbca',

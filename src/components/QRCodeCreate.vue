@@ -124,7 +124,7 @@ const qrOptions = computed(() => ({
 }))
 
 const qrCodeProps = computed<StyledQRCodeProps>(() => ({
-  data: data.value || 'Have a beautiful day!',
+  data: data.value || 'https://flexifunnels.com/',
   image: image.value,
   width: width.value,
   height: height.value,

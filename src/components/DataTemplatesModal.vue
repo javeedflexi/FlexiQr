@@ -178,7 +178,7 @@ const detectAndSetDataType = (data: string) => {
       break
 
     case 'url':
-      urlData.value = (result.parsedData.url as string) || ''
+      urlData.value = 'https://flexifunnels.com/'
       break
 
     case 'email':
