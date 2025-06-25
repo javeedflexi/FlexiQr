@@ -1,86 +1,46 @@
-import { fileURLToPath, URL } from 'node:url'
-
+// vite.config.js
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
-  optimizeDeps: {
-    exclude: ['lucide-vue-next']
-  },
   plugins: [
     vue(),
     vueJsx(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: [
-        'app_icons/web/favicon.ico',
-        'app_icons/web/splash-750x1334@2x.png',
-        'app_icons/web/splash-1170x2532@3x.png',
-        'app_icons/web/splash-1290x2796@3x.png',
-        'app_icons/web/splash-2048x2732@2x.png'
-      ],
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
       manifest: {
         name: 'MiniQR',
         short_name: 'MiniQR',
-        description: 'A minimal QR code generator and scanner',
-        theme_color: '#ffffff',
-        background_color: '#ffffff',
+        start_url: '/',
         display: 'standalone',
-        orientation: 'portrait',
+        background_color: '#ffffff',
+        theme_color: '#42b883',
         icons: [
           {
-            src: 'app_icons/web/icon-192.png',
+            src: '/pwa-192x192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: 'app_icons/web/icon-192-maskable.png',
-            sizes: '192x192',
-            type: 'image/png',
-            purpose: 'maskable'
-          },
-          {
-            src: 'app_icons/web/icon-512.png',
+            src: '/pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png'
-          },
-          {
-            src: 'app_icons/web/icon-512-maskable.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'maskable'
-          }
-        ],
-        screenshots: [
-          {
-            src: 'app_icons/web/screenshot-narrow.png',
-            sizes: '3510x7596',
-            type: 'image/png',
-            form_factor: 'narrow'
-          },
-          {
-            src: 'app_icons/web/screenshot-wide.png',
-            sizes: '7596x3510',
-            type: 'image/png',
-            form_factor: 'wide'
           }
         ]
-      },
-      workbox: {
-        navigateFallback: 'index.html',
-        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
-        globIgnores: ['**/node_modules/**/*']
-      },
-      devOptions: {
-        type: 'module'
       }
     })
   ],
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    emptyOutDir: true
+  },
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': '/src'
     }
   }
 })
