@@ -67,14 +67,13 @@ export default defineConfig({
       },
       workbox: {
         navigateFallback: 'index.html',
-        globPatterns: ['**/*.{js,css,html,ico,png,svg}'], // ✅ added
-        globIgnores: ['**/node_modules/**/*']             // ✅ optional
+        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+        globIgnores: ['**/node_modules/**/*']
       },
       devOptions: {
         type: 'module'
       }
     })
-
   ],
   resolve: {
     alias: {
