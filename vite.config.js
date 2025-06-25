@@ -18,6 +18,9 @@ export default defineConfig({
         'app_icons/web/splash-1290x2796@3x.png',
         'app_icons/web/splash-2048x2732@2x.png'
       ],
+      optimizeDeps: {
+        exclude: ['lucide-vue-next']
+      },
       manifest: {
         name: 'MiniQR',
         short_name: 'MiniQR',
