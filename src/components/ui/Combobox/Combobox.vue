@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Check, ChevronsUpDown } from 'lucide-vue-next'
+// import { Check, ChevronsUpDown } from 'lucide-vue-next'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -35,7 +35,7 @@ defineProps<{
       >
         <slot name="button-icon"></slot>
         {{ value ? items.find((item) => item.value === value)?.label : 'Select item...' }}
-        <ChevronsUpDown class="size-4 shrink-0 opacity-50" />
+        <!-- <ChevronsUpDown class="size-4 shrink-0 opacity-50" /> -->
       </Button>
     </PopoverTrigger>
     <PopoverContent class="w-fit p-0">
@@ -58,9 +58,9 @@ defineProps<{
                 "
               >
                 {{ item.label }}
-                <Check
+                <!-- <Check
                   :class="cn('ml-auto h-4 w-4', value === item.value ? 'opacity-100' : 'opacity-0')"
-                />
+                /> -->
               </CommandItem>
               <div
                 id="divider"
