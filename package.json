@@ -71,6 +71,7 @@
     "vite-plugin-pwa": "^0.21.1",
     "vitest": "^3.1.1",
     "vue-eslint-parser": "^9.4.3",
+    "workbox-build": "^7.3.0",
     "wrangler": "^4.21.2"
   }
 }
